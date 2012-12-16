@@ -1,8 +1,9 @@
 var restify = require('restify'),
 	mongoose = require('mongoose'),
-	todos = require('./routes/todos');
+	todos = require('./routes/todos'),
+	config = require('./config').config;
  
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://' + config.mongo.uri + '/' + config.mongo.db);
 
 var server = restify.createServer({
   name: 'todos-api',
