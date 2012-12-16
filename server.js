@@ -19,7 +19,7 @@ server.get('/todos/:id', todos.getById);
 server.del('/todos/:id', todos.delete);
 server.post('/todos', todos.save);
 
-
-server.listen(3000, function() {
+var port = process.env.PORT || 3000;
+server.listen(port, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
