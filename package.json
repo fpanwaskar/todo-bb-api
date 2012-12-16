@@ -1,0 +1,10 @@
+{
+    "name": "todo-api",
+    "description": "Todo Rest API",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "3.x",
+        "mongoose": "3.5.1"
+    }
+}
